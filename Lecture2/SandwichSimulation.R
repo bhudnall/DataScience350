@@ -15,7 +15,7 @@
 ## for certain combinations of simulation arguments. 
 
 sim.demand <- function(n){
-  bread <- runif(n) # Probabilities of bread choice 
+  bread <- runif(n) # Probabilities of bread choice, outcome if a vector of values < 1 and > 0
   ifelse(bread <= 0.5, 'white', 
          ifelse(bread <= 0.75, 'wheat', 'multi'))
 }
